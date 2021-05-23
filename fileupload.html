@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5 Drag & Drop</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #image-placeholder div {
+            width: 20%;
+            margin-right: 50px;
+        }
+
+        #image-placeholder div img {
+            width: 100%;
+        }
+
+        .image-drop-area {
+            width: 100%;
+            border-radius: 5px;
+            border: 2px dashed black;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-drop-area.active {
+            border-color: green;
+        }
+
+        .image-drop-area h2 {}
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <label for="file-upload">Upload your profile photo</label>
+                <input id="file-upload" type="file" class="form-control"
+                    placeholder="please add your files either drag drop or upload window" multiple>
+            </div>
+            <div class="col-12 mt-5 d-flex justify-content-flex-start" id="image-placeholder">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="image-drop-area">
+            <div class="text-center">
+                <h2>Drop your files here to upload</h2>
+                <button class="btn btn-primary">Choose files</button>
+            </div>
+        </div>
+        <div class="col-12 mt-5 d-flex justify-content-flex-start" id="image-placeholder-2">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/fileupload.js"></script>
+</body>
+
+</html>
